@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom right, #FFDDE1, #D7DDE8);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 10px 0; /* Increased margin between buttons */
+        }
+        .button:not(:last-child) {
+            margin-bottom: 15px; /* Added margin between buttons */
+        }
+        #check-attendance {
+            background-color: #AED9E0;
+            color: #333;
+        }
+        #register-student {
+            background-color: #FFB7C5;
+            color: #333;
+        }
+        #capture-attendance {
+            background-color: #FFDAC1;
+            color: #333;
+        }
+        .button:hover {
+            background-color: #FF848D;
+            color: #fff;
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our School</h1>
+        <p>Please choose one of the options below:</p>
+        <div class="button-container">
+            <form action="/button_clicked" method="post">
+                <button class="button" id="check-attendance" type="submit" name="button" value="button1" tabindex="1">Check Attendance</button>
+            </form>
+            <form action="/button_clicked" method="post">
+                <button class="button" id="register-student" type="submit" name="button" value="button2" tabindex="2">Register New Student</button>
+            </form>
+            <form action="/button_clicked" method="post">
+                <button class="button" id="capture-attendance" type="submit" name="button" value="button3" tabindex="3">Capture Attendance</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
